@@ -4,41 +4,39 @@
 
 <script lang="ts">
 import { defineComponent } from "@vue/runtime-core";
-import { connectWallet } from "../../reach";
-import ReachStoreMixin from "../../mixins/ReachStore.mixin";
-import { truncateAccountString } from "../../reach/utils";
-import ReachStore from "../../reach/store";
+import { disconnectUser, useMyAlgo } from "../../reach";
+import StoreMixin from "../../mixins/Store.mixin";
+import { truncateAccountString } from "../../reach/index";
 
 export default defineComponent({
   name: "ConnectWallet",
 
-  mixins: [ReachStoreMixin],
+  mixins: [StoreMixin],
 
   data: () => ({
-    reachStore: {
-      address: "",
-    },
+    store: { address: "" },
   }),
 
   computed: {
     connectButtonText(): string {
       return this.connected
-        ? truncateAccountString(this.reachStore.address)
+        ? truncateAccountString(this.store.address)
         : "Connect Wallet";
     },
 
     connected(): boolean {
-      return this.reachStore.address.length > 0;
+      return this.store.address.length > 0;
     },
+  },
+
+  mounted() {
+    const storeKeys = Object.keys(this.store);
+    this.subscribe(storeKeys);
   },
 
   methods: {
     toggleConnect() {
-      if (!this.connected) {
-        return connectWallet();
-      }
-
-      return ReachStore.reset();
+      return this.connected ? disconnectUser() : useMyAlgo();
     },
   },
 });

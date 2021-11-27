@@ -4,24 +4,7 @@
 A folder with some basic helpers and a global pub-sub Reach state manager.
 
 ## How do I use it?
-This section contains a few individual components that can be imported and used independently: 
-
-* `useReach()`:\
-  A function that returns the current global `stdLib` instance. The instance will be created only the first time this function is called.
-
-* `getCurrentNetwork()`:\
-  A function that returns the current `reach.connector` property. This represents the network to which your `stdLib` instance is connected/configured
-
-* `getNetworkProvider()`:\
-  A function that returns either `TestNet` or `MainNet`: only relevant when `stdLib` is configured to Algorand.
-
-* `ReachStore`:\
-  A [raphsducks state instance](https://www.npmjs.com/package/@jackcom/raphsducks) for storing Reach-specific data.
-  ### `ReachStore` (State) Properties
-  All values return `null` when not set. 
-  * `currentNetwork`: Current `reach.connector` **network** (defaults to `Algorand`)
-  * `error`: Error messages around using the `reach` instance
-  * `user`: Authenticated Reach account (a connected `Address`) 
+This section contains a few individual components that can be imported and used independently. Look in the folder code to see what's available. 
 
 ### `ReachStore` Instance methods
   * `getState()`:\
