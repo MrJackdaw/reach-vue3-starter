@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ConnectWallet from "./Reach/ConnectWallet.vue";
+import ConnectWallet from "./ConnectWallet.vue";
 
 export default defineComponent({
   name: "AppNav",

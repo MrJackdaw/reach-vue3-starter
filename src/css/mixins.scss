@@ -12,6 +12,11 @@ $xxxs: 0.25rem;
 $tiny: 0.12rem;
 $xtiny: 0.05rem;
 
+// Theme stuff
+$primary: #2c3e50;
+$secondary: #3fb983;
+$link: #36b4c7;
+
 @mixin hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

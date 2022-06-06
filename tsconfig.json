@@ -8,26 +8,19 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "jsx": "preserve",
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "module": "esnext",
     "moduleResolution": "node",
+    "rootDir": ".",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
     "types": ["webpack-env", "jest"],
     "paths": {
-      "@/*": ["src/*"],
-      "@/reach": ["src/reach/"],
-    },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+      "@/*": ["./src/*"]
+    }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx",
-    "src/mixins/**/*.ts"
-  ],
+  "include": ["src/**/*", "tests/**/*.ts", "tests/**/*.tsx"],
   "exclude": ["node_modules"]
 }

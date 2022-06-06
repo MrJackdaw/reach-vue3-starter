@@ -1,22 +1,25 @@
 import createState from "@jackcom/raphsducks";
-import { NETWORKS } from "../reach/constants";
+import { NETWORKS } from "@jackcom/reachduck";
 
 /** Your global application state. Add any properties you need here */
 const store = createState({
+  /** @demo Counter property. You can remove this */
+  count: 0,
+
+  /** When true, user has connected a wallet */
   connected: false,
 
+  /** Message objects (can be sorted by timestamp) */
   notifications: [] as Alert[],
+
   /** Wallet address (for UI) */
   address: "",
 
   /** Reach `networkAccount` instance */
   account: null as any | null,
 
-  /** Reach `networkAccount` instance */
-  accountsList: [] as any[],
-
   /** Reach `networkAccount` balance */
-  balance: "0.00",
+  balance: "0",
 
   /** Current configured network */
   currentNetwork: NETWORKS.ALGO.abbr,
@@ -24,11 +27,8 @@ const store = createState({
   /** Error messages */
   error: "",
 
-  /** Loading state */
+  /** Global Loading state */
   loading: false,
-
-  /** Notifications */
-  notification: "",
 });
 
 export default store;

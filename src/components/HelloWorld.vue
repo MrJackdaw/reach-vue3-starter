@@ -1,13 +1,40 @@
 <template>
-  <div class="hello">
+  <page-container class="hello">
     <h1>{{ msg }}</h1>
+    <h3>Quick-start</h3>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br />
+      Here from the
+      <a
+        href="https://github.com/MrJackdaw/reach-reactjs-starter"
+        rel="noopener noreferrer nofollow"
+        target="_blank"
+        >React repo</a
+      >, or just aching to get started? Go
+      <a href="/about">here</a>
+    </p>
+
+    <p>
+      For a guide and recipes on how to configure / customize a vue project,
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
         >vue-cli documentation</a
       >.
     </p>
+
+    <h3>Application state</h3>
+    <p>
+      This starter uses a simple state management library. You can replace it
+      with any of your preferred state managers.
+    </p>
+
+    <p>
+      The value below is in global state. You can view it on the
+      <b><a href="/about" title="About">About</a></b> page after changing it
+      here. It will reset when you reload the window.
+    </p>
+
+    <global-count-button />
+
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li>
@@ -59,6 +86,7 @@
         >
       </li>
     </ul>
+
     <h3>Essential Links</h3>
     <ul>
       <li>
@@ -84,6 +112,7 @@
       </li>
     </ul>
     <h3>Ecosystem</h3>
+
     <ul>
       <li>
         <a href="https://router.vuejs.org" target="_blank" rel="noopener"
@@ -115,17 +144,18 @@
         >
       </li>
     </ul>
-  </div>
+  </page-container>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
+import PageContainer from "./Containers/PageContainer.vue";
+import GlobalCountButton from "./GlobalCountButton.vue";
 
 export default defineComponent({
+  components: { PageContainer, GlobalCountButton },
   name: "HelloWorld",
-  props: {
-    msg: String,
-  },
+  props: { msg: String },
 });
 </script>
 
