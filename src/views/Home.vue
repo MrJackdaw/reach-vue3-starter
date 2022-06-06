@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Vue3 + TypeScript + Reach App" />
+    <HelloWorld msg="Vue3 + TypeScript + Reach" />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <page-container class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="h2">{{ msg }}</h1>
     <h3>Quick-start</h3>
     <p>
       Here from the
