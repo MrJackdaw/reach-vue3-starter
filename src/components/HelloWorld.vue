@@ -29,8 +29,8 @@
 
     <p>
       The value below is in global state. You can view it on the
-      <b><a href="/about" title="About">About</a></b> page after changing it
-      here. It will reset when you reload the window.
+      <router-link to="/about" title="About"><b>About</b></router-link> page
+      after changing it here. It will reset when you reload the window.
     </p>
 
     <global-count-button />

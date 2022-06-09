@@ -55,8 +55,8 @@
     <h3 class="h4">Application State</h3>
     <p>
       The value below is in global state. You can view it on the
-      <b><a href="/" title="Home">Home</a></b> page after changing it here. It
-      will reset if you reload the window.
+      <router-link to="/" title="Home">Home</router-link> page after changing it
+      here. It will reset if you reload the window.
     </p>
 
     <global-count-button />
