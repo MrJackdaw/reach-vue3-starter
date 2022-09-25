@@ -1,6 +1,6 @@
 {
   "name": "reach-vue3x",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@jackcom/raphsducks": "^2.0.1",
-    "@jackcom/reachduck": "^0.4.5",
-    "@reach-sh/stdlib": "^0.1.11-rc.6",
+    "@jackcom/reachduck": "^0.4.7",
+    "@reach-sh/stdlib": "^0.1.12-rc.1",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
